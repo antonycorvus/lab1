@@ -46,7 +46,7 @@ class ProductsManager {
     return [..._items];
   }
 
-  List<Product> get favoriyeItem {
+  List<Product> get favoriteItem {
     return _items.where((prodItem) => prodItem.isFavorite).toList();
   }
 }
