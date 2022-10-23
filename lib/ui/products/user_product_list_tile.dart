@@ -51,8 +51,11 @@ class UserProductListTile extends StatelessWidget {
   Widget buildEditButton(BuildContext context){
     return IconButton(
       icon: const Icon(Icons.edit),
-      onPressed: () async {
-        print('Go to edit product screen');
+      onPressed: () {
+        Navigator.of(context).pushNamed(
+          EditProductScreen.routeName,
+          arguments: product.id,
+        );
       },
       color: Theme.of(context).primaryColor,
     );
