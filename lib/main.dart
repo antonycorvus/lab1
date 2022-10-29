@@ -29,14 +29,14 @@ class MyApp extends StatelessWidget {
             productsManager!.authToken=authManager.authToken;
             return productsManager;
           },
-        )
+        ),
         
-        // ChangeNotifierProvider(
-        //   create: (ctx) => CartManager(),
-        // ),
-        // ChangeNotifierProvider(
-        //   create: (ctx) => OrdersManager(), 
-        // ),
+        ChangeNotifierProvider(
+          create: (ctx) => CartManager(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => OrdersManager(), 
+        ),
       ],
       child: Consumer<AuthManager>(
         builder: (ctx, authManager, child) {
